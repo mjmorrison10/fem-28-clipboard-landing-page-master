@@ -1,0 +1,28 @@
+:root {
+  /* ### Primary */
+  --color-Strong-Cyan: hsl(171, 66%, 44%);
+  --color-Light-Blue: hsl(233, 100%, 69%);
+  /* ### Neutral */
+  --color-Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --color-Grayish-Blue: hsl(201, 11%, 66%);
+
+  font-size: var(--fontSize);
+
+  --fontSize: 18px;
+}
+
+* {
+  font-family: "Bai Jamjuree", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
