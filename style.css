@@ -71,6 +71,7 @@ body {
 .wrapper {
   padding: 0 2px;
   max-width: var(--width);
+  width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -446,6 +447,8 @@ footer {
     text-align: center;
     align-items: center;
   }
+
+
 
   .page-2-header {
     margin-top: 2rem;
