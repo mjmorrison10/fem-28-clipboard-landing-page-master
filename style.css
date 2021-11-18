@@ -131,6 +131,7 @@ body {
   border-radius: 50px;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -154,6 +155,16 @@ body {
   margin-right: 0.25rem;
 }
 
+.btn-primary:hover {
+  --Strong-Cyan-light: 49%;
+  background-color: hsl(
+    var(--Strong-Cyan-hue),
+    var(--Strong-Cyan-sat),
+    var(--Strong-Cyan-light)
+  );
+  transition: all 250ms ease-in-out;
+}
+
 .btn-secondary {
   background-color: var(--color-Light-Blue);
 
@@ -173,6 +184,16 @@ body {
       0.5
     );
   margin-left: 0.25rem;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-secondary:hover {
+  --Light-Blue-light: 74%;
+  background-color: hsl(
+    var(--Light-Blue-hue),
+    var(--Light-Blue-sat),
+    var(--Light-Blue-light)
+  );
 }
 
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -209,9 +230,9 @@ body {
 /* //////////////////////////////////////////////////////////////////////////////// */
 
 .page-3 {
-    height: auto;
-    padding-top: 4%;
-    text-align: center;
+  height: auto;
+  padding-top: 4%;
+  text-align: center;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -219,28 +240,152 @@ body {
 /* //////////////////////////////////////////////////////////////////////////////// */
 
 .page-4 {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding-top: 4rem;
-
+  padding-top: 4rem;
+  height: auto;
 }
 
-
 .page-4-info {
-    display: flex;
+  display: flex;
+  width: 90%;
+  text-align: center;
+  margin-top: 2rem;
+  justify-content: space-between;
 }
 
 .page-4-icons {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 4rem 0;
 }
 
+.page-4-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.page-4-p {
+  max-width: 34ch;
+}
 
+.page-4-img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.page-4-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.google img,
+.ibm img,
+.microsoft img,
+.hp img,
+.vector-graphics img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* Page 5 ///////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.page-5 {
+  padding-top: 2rem;
+}
+
+.page-5-p {
+  text-align: center;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* Footer ///////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
 
 footer {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(
+    var(--Grayish-Blue-hue),
+    var(--Grayish-Blue-sat),
+    var(--Grayish-Blue-light),
+    0.25
+  );
+  padding: 2rem 4rem;
+}
+
+.footer-img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.footer-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+/* https://grid.layoutit.com/?id=QMxekL3 */
+
+.footer-menu {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem 5rem;
+  grid-template-areas:
+    "faq privacy-policy install-guide"
+    "contact-us press-kit.";
+  color: var(--color-Dark-Grayish-Blue);
+}
+
+.footer-menu li {
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+.footer-menu li:hover {
+  color: var(--color-Strong-Cyan);
+}
+
+.faq {
+  grid-area: faq;
+}
+.contact-us {
+  grid-area: contact-us;
+}
+.privacy-policy {
+  grid-area: privacy-policy;
+}
+.press-kit {
+  grid-area: press-kit;
+}
+.install-guide {
+  grid-area: install-guide;
+}
+
+.social-media-icons {
+  display: flex;
+}
+
+.social-media-icons i {
+  font-size: var(--fontSize-x15-large);
+  color: var(--color-Dark-Grayish-Blue);
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.social-media-icons i:hover {
+  color: var(--color-Strong-Cyan);
+}
+
+.social-media-icons i + i {
+  margin-left: 1rem;
 }
 
 .attribution {
