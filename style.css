@@ -95,7 +95,7 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  min-width: var(--width);
+  /* min-width: var(--width); */
   justify-content: flex-end;
   text-align: center;
   padding-bottom: 2rem;
@@ -281,6 +281,14 @@ body {
   object-fit: contain;
 }
 
+.google,
+.ibm,
+.microsoft,
+.hp,
+.vector-graphics {
+  height: 4rem;
+  width: 8rem;
+}
 .google img,
 .ibm img,
 .microsoft img,
@@ -397,4 +405,90 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+/* Media Queries ////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 925px) {
+  .page-1 {
+    padding-top: 5rem;
+  }
+  .page-header {
+    max-width: 16ch;
+    text-align: center;
+  }
+
+  .page-p {
+    max-width: 30ch;
+    text-align: center;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 450px;
+  }
+
+  .btn {
+    margin: 0.35rem 0;
+  }
+
+  .page-2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-2-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .page-2-header {
+    margin-top: 2rem;
+  }
+
+  .page-img {
+    width: 90%;
+    height: auto;
+  }
+
+  .page-4-img {
+    margin-bottom: 2rem;
+  }
+
+  .page-4-info {
+    flex-direction: column;
+  }
+
+  .page-4-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-4-icons > div {
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    margin: 1rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "faq"
+      "contact-us"
+      "privacy-policy"
+      "press-kit"
+      "install-guide";
+  }
+
+  .footer-menu li {
+    text-align: center;
+  }
 }
